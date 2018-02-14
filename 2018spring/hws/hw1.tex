@@ -54,7 +54,7 @@
 
 \question[15] \textbf{(Designing a Tournament)}  This question will help you understand the applications of Chernoff bound and Union bound more, as you'll deal with tuning parameters to optimize the efficiency of the system. You'll also get an understanding of why NBA tournaments are designed the way they are, with more repeated matches being played as we get closer to the finals. For example, in the NBA, the early rounds are \emph{best-of-five}, and the later rounds become \emph{best-of-seven}. You will understand why, and also learn how to design tournaments with $n$ participants, for large $n$.
 
-Suppose there are $n$ teams, and they are totally ranked. That is, there is a well-defined best team, second ranked team and so on. It's just that we (the tournament designer) don't know the ranking. Moreover, assume that for any given match between two players, the better ranked team will win the match with probability $p = \frac12 + \delta$, \emph{independent of all other matches between these players and all other players also}. Here $\delta$ is a small positive constant. All your answers below will depend on the value of $\delta$.
+Suppose there are $n$ teams, and they are totally ranked. That is, there is a well-defined best team, second ranked team and so on. It's just that we (the tournament designer) don't know the ranking. Moreover, assume that for any given match between two players, the better ranked team will win the match with probability $p = 0.6$, \emph{independent of all other matches between these players and all other players also}. 
 
 \begin{parts}
 \part[3] Let $n$ be a power of two, and fix an \emph{arbitrary tournament tree} starting with $n/2$ matches, then $n/4$ matches and so on. That is, initially, team 1 plays team 2, team 3 plays team 4, and so on (each series is only $1$ game). The winners advance, and pair up and play each other once, and so on until one team remains. What is the probability that the best team wins the tournament?
@@ -65,14 +65,14 @@ Suppose there are $n$ teams, and they are totally ranked. That is, there is a we
   \end{proof}
   \end{solution}
 
-\part[5] Now change the tournament to make each series as a \emph{best-of-$k$} series. How large should $k$ be, and so how many games do you end up conducting in total to get a $1-\epsilon$ probability of the best team winning the overall series?
+\part[5] Now change the tournament to make each series as a \emph{best-of-$k$} series. Using Chernoff bounds, show that if $k = \Omega( \log \log n)$, then the best team winning the overall tournament with some constant probability, say $0.9$? So how many games have we conducted overall?
   \begin{solution}
   \begin{proof}
   $1 + 1 = 2$.
   \end{proof}
   \end{solution}
 
-\part[8] Can you get better dependence on $n$ if you allow different number of games in each round: example, try having $k_1$ games in the first series, $k_2$ games in the next series, etc. and optimize for these values to get a total of $O_{\epsilon}(n)$ games which still retains $1-\epsilon$ probability of the best team winning eventually. Here $O_\epsilon(n)$ means $O(n)$ for all constant $\epsilon>0$.
+\part[8] Can you get better dependence on $n$ if you allow different number of games in each round: example, try having $k_1$ games in the first series, $k_2$ games in the next series, etc. and optimize for these values to get a total of $O(n)$ games which still retains $0.9$ probability of the best team winning eventually. 
   \begin{solution}
   \begin{proof}
   $1 + 1 = 2$.
@@ -84,7 +84,7 @@ Suppose there are $n$ teams, and they are totally ranked. That is, there is a we
 
 \question[15] \textbf{(Different Algorithms for Weighted Vertex Cover)}  Here we will analyze different possible algorithms for weighted vertex cover. For each of the following
 approximation algorithms for Min-Vertex-Cover with positive vertex weights, prove the best
-approximation ratio guarantee that you can. 
+approximation ratio guarantee that you can.
 
 \begin{parts}
 \part[2] Super Naive: Consider all the edges in some arbitrary order. If the edge $\{u, v\}$ being considered is not covered yet, pick whichever of $u$ or $v$ has less weight.
@@ -141,9 +141,9 @@ vertex maximizing $\min_{s \in S_2} d(v, s)$, and so on. In general, pick $v_j$ 
 
 
 
-\question[10] {\bf Fun with Submodularity.} In this exercise we will get a better understanding of submodular functions. 
+\question[10] {\bf Fun with Submodularity.} In this exercise we will get a better understanding of submodular functions.
 \begin{parts}
-\part[5] In class we defined submodularity as the definition that $f(S \cup \{i\}) - f(S) \geq f(T \cup \{i\}) - f(T)$ for all $S \subseteq T$ and $i \notin T$. Show that this is the same as the condition that $f(S) + f(T) \geq f(S \cap T) + f(S \cup T)$ for all $S, T \subseteq [n]$. 
+\part[5] In class we defined submodularity as the definition that $f(S \cup \{i\}) - f(S) \geq f(T \cup \{i\}) - f(T)$ for all $S \subseteq T$ and $i \notin T$. Show that this is the same as the condition that $f(S) + f(T) \geq f(S \cap T) + f(S \cup T)$ for all $S, T \subseteq [n]$.
 \part[5] Let $ \Omega=\{v_1,v_2,\dots,v_n\}$ be the vertices of an undirected graph. For any set of vertices $S\subseteq \Omega$ let $f(S)$ denote the number of edges $ e=(u,v)$ such that $ u\in S$ and $v\in \Omega-S$. Show that $f$ is submodular.
   \begin{solution}
   \begin{proof}
@@ -153,7 +153,7 @@ vertex maximizing $\min_{s \in S_2} d(v, s)$, and so on. In general, pick $v_j$ 
 \end{parts}
 
 
-\question[0] {\bf Difficulty Level.} How difficult was this homework? How much time would you have spent on these questions? 
+\question[0] {\bf Difficulty Level.} How difficult was this homework? How much time would you have spent on these questions?
   \begin{solution}
   \begin{proof}
   $1 + 1 = 2$.
