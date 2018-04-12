@@ -48,3 +48,8 @@ Temporary Items
 2018spring/hws/hw3.bbl
 2018spring/hws/hw3.log
 2018spring/hws/hw3.synctex
+*.aux
+2018spring/hws/hw4.bbl
+*.blg
+*.log
+*.synctex
